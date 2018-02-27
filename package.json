@@ -28,6 +28,7 @@
     "contentBase": "./dist"
   },
   "dependencies": {
-    "angular": "^1.6.9"
+    "angular": "^1.6.9",
+    "reset-css": "^2.2.1"
   }
 }

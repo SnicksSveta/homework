@@ -11,12 +11,14 @@
 <body>
 
     <div class="calculator" ng-app="homework" ng-controller="CalculatorController">
-        <input ng-model="a" type="text" placeholder="введите первое число">
-        <input ng-model="operator" type="text" placeholder="выберите оператор">
-        <input ng-model="b" type="text" placeholder="введите второе число">
-        <br>
-        <br>
-        <p>Результат: {{ result() }}</p>
+        <h2>calculator</h2>
+        <div class="calculator__input-wrapper">
+            <input ng-model="a" type="text" placeholder="first number">
+            <input ng-model="operator" type="text" placeholder="operation">
+            <input ng-model="b" type="text" placeholder="second number">
+        </div>
+        <p class="result">Результат: {{ result() }}</p>
     </div>
 </body>
+
 </html>

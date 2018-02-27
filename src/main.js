@@ -1,9 +1,11 @@
+import './style.scss';
+
 const angular = require('angular');
 
 var ngModule = angular.module('homework', [])
-    .controller('CalculatorController', function($scope) {
+    .controller('CalculatorController', function ($scope) {
 
-        $scope.result = function() {
+        $scope.result = function () {
             let num1 = parseInt($scope.a);
             let num2 = parseInt($scope.b);
 
