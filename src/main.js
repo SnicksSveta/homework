@@ -1,27 +1,23 @@
+const angular = require('angular');
 
-const btnCalculate = document.querySelector('.btn-calculate');
-const inputA = document.querySelector('[name="a"]');
-const inputB = document.querySelector('[name="b"]');
-const inputC = document.querySelector('[name="c"]');
-const result = document.querySelector('.result');
+var ngModule = angular.module('homework', [])
+    .controller('CalculatorController', function($scope) {
 
-btnCalculate.addEventListener("click", function () {
+        $scope.result = function() {
+            let num1 = parseInt($scope.a);
+            let num2 = parseInt($scope.b);
 
-    const a = parseInt(inputA.value, 10);
-    const b = parseInt(inputB.value, 10);
-
-    let valinputC = inputC.value;
-
-    if (valinputC === '+') {
-        result.innerHTML = a + b;
-    } else if (valinputC === '-') {
-        result.innerHTML = a - b;
-    } else if (valinputC === '*') {
-        result.innerHTML = a * b;
-    } else if (valinputC === '/') {
-        result.innerHTML = a / b;
-        if (inputB.value === 0) {
-            alert("Нельзя делить на ноль!");
-        }
-    }
-});
+            if ($scope.operator === '+') {
+                return num1 + num2;
+            }
+            if ($scope.operator === '-') {
+                return num1 - num2;
+            }
+            if ($scope.operator === '*') {
+                return num1 * num2;
+            }
+            if ($scope.operator === '/') {
+                return num1 / num2;
+            }
+        };
+    });

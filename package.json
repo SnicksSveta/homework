@@ -26,5 +26,8 @@
   },
   "devServer": {
     "contentBase": "./dist"
+  },
+  "dependencies": {
+    "angular": "^1.6.9"
   }
 }
